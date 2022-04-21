@@ -29,6 +29,7 @@ public interface CustomerRegistrationValidator
                         SUCCESS : IS_NOT_AN_ADULT;
     }
 
+    // explanation https://stackoverflow.com/questions/69079291/combinator-pattern-java-function-e-t
     default CustomerRegistrationValidator and (CustomerRegistrationValidator other) {
         return customer -> {
             ValidationResult result = this.apply(customer);
